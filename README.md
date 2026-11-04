@@ -18,7 +18,7 @@ Aucun Tomcat n'est installé séparément : chaque microservice démarre avec so
 ## Structure du dépôt
 
 ```text
-TP3_Rest/
+calcul-service/
 ├── calcul-service/        (port 8081, ressource /calcul)
 │   └── src/main/java/com/exemple/calcul/{controller,service,model}
 ├── historique-service/    (port 8082, ressource /operations)
