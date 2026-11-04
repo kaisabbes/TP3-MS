@@ -1,0 +1,8 @@
+POST http://localhost:8082/operations
+Content-Type: application/json
+
+{
+  "operateur": "somme",
+  "a": 10,
+  "b": 5
+}
