@@ -11,7 +11,7 @@
 | Serveur embarqué | Apache Tomcat 11.0.27 (inclus dans `spring-boot-starter-webmvc`) |
 | curl | 8.21.0 (`curl.exe`) |
 | IDE | IntelliJ IDEA 2026.2.3 |
-| Postman | [À COMPLÉTER : version] |
+| Postman | 12.35.1 |
 
 Aucun Tomcat n'est installé séparément : chaque microservice démarre avec son serveur embarqué.
 
