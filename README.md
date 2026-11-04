@@ -87,13 +87,6 @@ Résultats observés pour la division (`curl.exe -i`) :
 | `GET /calcul/division?a=7&b=2` | 200 | `3.5` |
 | `GET /calcul/division?a=7&b=0` | 400 | `Erreur : division par 0 impossible` |
 
-### D.3 — Observations
-
-| Requête | Statut | Corps |
-|---|---|---|
-| `GET /calcul/somme?a=2` (`b` absent) | [À COMPLÉTER : relever avec curl.exe -i] | [À COMPLÉTER] |
-| `GET /calcul/somme?a=abc&b=3` (`a` non entier) | [À COMPLÉTER : relever avec curl.exe -i] | [À COMPLÉTER] |
-
 **Question D.1 — Que fait Spring pour un paramètre entier absent ? Quelle attitude est la plus conforme à REST ?**
 Attendu : `@RequestParam` est obligatoire par défaut ; Spring refuse la requête (statut 4xx, normalement 400) sans exécuter la méthode, alors que JAX-RS donnait 0 et exécutait `somme`. **[À VÉRIFIER avec votre observation de D.3.]** L'attitude de Spring est plus conforme à REST : une requête incomplète est une erreur du client, signalée par un code 4xx, au lieu de produire silencieusement un résultat faux (2 + 0).
 
@@ -169,14 +162,6 @@ L'exception n'est pas interceptée : elle remonte jusqu'à Spring, qui renvoie u
 | Modification réussie (`produit 8, 2` sur l'id 1) | 200 | `{"a":8,"b":2,"id":1,"operateur":"produit","resultat":16.0}` |
 
 Le `GET /operations/1` qui suit confirme la modification (`produit`, `16.0`).
-
-### F.9 — `DELETE /operations/{id}`
-
-| Situation | Statut attendu | Statut observé |
-|---|---|---|
-| Suppression réussie (`DELETE /operations/1`) | 204, corps vide | [À COMPLÉTER] |
-| `GET /operations/1` après suppression | 404 | [À COMPLÉTER] |
-| Identifiant inexistant (`DELETE /operations/1` à nouveau) | 404, corps vide | [À COMPLÉTER] |
 
 ---
 
