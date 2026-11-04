@@ -1,4 +1,4 @@
-# TP3 REST : Microservices « Calculatrice » avec Spring Boot
+# TP3 MS : Microservices « Calculatrice » avec Spring Boot
 
 ## Environnement
 
